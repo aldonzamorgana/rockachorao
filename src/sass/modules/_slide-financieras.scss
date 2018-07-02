@@ -146,9 +146,7 @@
     // Boton del slide
     .slideButton {
       cursor: pointer;
-      height: 30px;
       font-size: 0;
-      vertical-align: middle;
       line-height: 30px;
       margin-top: -15px;
       position: absolute;
@@ -156,12 +154,17 @@
       top: 50%;
       width: 30px;
       z-index: 1;
+      display: block;
+      background: black;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
       &.slick-disabled {
         display: none !important;
       }
       i {
-        background: transparent url(../img/sprite-icons.png) -160px 0 no-repeat;
-        background-size: 190px 100px;
+        background: transparent url(../img/sprite-icons.png) 0px 0 no-repeat;
+        background-size: 31px 66px;
         vertical-align: middle;
         height: 30px;
         width: 30px;
@@ -171,7 +174,7 @@
       &--prev {
         left: 0px;
         i {
-          background-position: -160px -30px;
+          background-position: -3px -31px;
         }
         @include breakpoint(phablet) {
           left: 0;

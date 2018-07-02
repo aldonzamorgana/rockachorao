@@ -435,9 +435,9 @@ table {
 	position: relative;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 4.15rem;
+	font-size: 3.15rem;
 	letter-spacing: 0.15rem;
-	line-height: 1.25;
+	line-height: 1.05;
 	font-family: $font_family_6;
 	&::before {
 		content: attr(data-hover);
@@ -553,7 +553,7 @@ table {
     left: 0;
     background: #ececec;
     opacity: 0;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     padding: 5rem 5vw;
@@ -689,7 +689,8 @@ table {
 		bottom: auto;
 	}
 	.overlay__item {
-		flex-direction: row;
+		// display: block;
+		// flex-direction: row;
 		.box__title--bottom {
 			bottom: 0;
 		}
@@ -707,6 +708,7 @@ table {
 		margin-top: 0;
 	}
 }
+
 @media screen and (max-width: 600px) {
 	.sub_title {
 		padding: 0rem;
@@ -731,10 +733,7 @@ table {
 	}
 	.overlay__content_image_one {
 		font-size: 1.1rem;
-	}
-	.overlay__item {
-		display: block;
-	}
+	}	
 	.box__content {
 		top: 0px;
 		color: $color_10;
@@ -742,36 +741,37 @@ table {
 		font-size: 1.2rem;
 	}
 }
-@media screen and (max-width: 55em) {
-	.content {
-		flex-direction: column;
-		height: auto;
-		min-height: 0;
-	}
-	.content--fixed {
-		position: relative;
-		z-index: 1000;
-		display: block;
-		padding: 0.85em;
-	}
-	.codrops-header {
-		flex-direction: column;
-		align-items: center;
-		padding-bottom: 5rem;
-	}
-	.codrops-header__title {
-		font-weight: bold;
-		padding-bottom: 0.25em;
-		text-align: center;
-	}
-	.info {
-		margin: 0;
-	}
-	.github {
-		display: block;
-		margin: 1em auto;
-	}
-	.codrops-links {
-		margin: 0;
-	}
-}
+
+// @media screen and (max-width: 55em) {
+// 	.content {
+// 		flex-direction: column;
+// 		height: auto;
+// 		min-height: 0;
+// 	}
+// 	.content--fixed {
+// 		position: relative;
+// 		z-index: 1000;
+// 		display: block;
+// 		padding: 0.85em;
+// 	}
+// 	.codrops-header {
+// 		flex-direction: column;
+// 		align-items: center;
+// 		padding-bottom: 5rem;
+// 	}
+// 	.codrops-header__title {
+// 		font-weight: bold;
+// 		padding-bottom: 0.25em;
+// 		text-align: center;
+// 	}
+// 	.info {
+// 		margin: 0;
+// 	}
+// 	.github {
+// 		display: block;
+// 		margin: 1em auto;
+// 	}
+// 	.codrops-links {
+// 		margin: 0;
+// 	}	
+// }

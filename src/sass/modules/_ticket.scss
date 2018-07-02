@@ -43,16 +43,29 @@ $c_fondo_tiempo   : #e1ebfc;
   &-title {
     color: $c_texto_base_azul;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 21px;
     margin-bottom: 3px;
     // margin-top: 12px;
   }
 
   &-guia {
     color: $c_texto_base;
-    font-size: 13.4px;
+    font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    span{
+      font-size: 28px;
+      font-weight: 600;
+      margin: 4px;
+    } 
+    p{
+      margin:0
+    } 
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }  
   }
   
   &-content {
@@ -60,18 +73,49 @@ $c_fondo_tiempo   : #e1ebfc;
     width: 100%;
     a{
       white-space: nowrap;
+      font-weight: 600;
+      background: black;
+      color: white;
+      padding: 5px;
+      font-size: 12px;
+      -moz-transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-box-shadow: 0 0 1px transparent;
+      box-shadow: 0 0 1px transparent;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transition: transform .3s;
+      -o-transition: transform .3s;
+      transition: transform .3s;
+      display: inline-block;
+      height: 28px;
+      line-height: 20px;
+      &:hover{
+        color: white;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+      }
     }
+    
     h3{
-      font-size: 18px;
+      font-size: 19px;
+      font-weight: 500;
     }
     .row{
-      width:50%;
-      float: left;
-      display: inline-block;
+      width:100%;
+      float: none;
+      display: block;      
     }
-    // @include breakpoint(tablet) {
-    //   display: table;
-    // }
+    @include breakpoint(tablet) {
+      .row{
+        width:50%;
+        float: left;
+        display: inline-block;
+        padding: 0 0.5rem;
+      }
+    }
   }
 }
 
