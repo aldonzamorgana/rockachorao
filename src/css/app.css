@@ -1931,7 +1931,8 @@ label.error:after {
       transition: transform .3s;
       display: inline-block;
       height: 28px;
-      line-height: 20px; }
+      line-height: 20px;
+      white-space: nowrap; }
       .Ticket-content a:hover {
         color: white;
         transform: scale(1.05); }

@@ -4,9 +4,8 @@ var SlideFinancieras = (function(){
   var dom = {};
 
   var init = function(){
-    events.crearSlide('.SlideFinancieras--bancaInternetPersonas'); // Slide de Banca por Internet - Personas
-    events.crearSlide('.SlideFinancieras--pagoEfectivoSucursal'); // Slide de Pago en efectivo - Sucursal
-    events.crearSlide('.SlideFinancieras--pagoEfectivoTiendas'); // Slide de Pago en efectivo - Tiendas
+    events.crearSlide('.SlideFinancieras--ciudades'); // Slide de Banca por Internet - Personas
+    events.crearSlide('.SlideFinancieras--generos'); // Slide de Pago en efectivo - Sucursal
 
     events.seleccionEntidad(); // Eventos cuando se selecciona un banco
     $(".SlideFinancieras-list a.is-selected").click();

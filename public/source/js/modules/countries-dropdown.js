@@ -14,77 +14,51 @@ var CountriesDropdown = function(){
   var events = {};
 
   var catchdom = function() {
-    dom.module = $(".CountriesDropdown");
-    dom.countries_select = $(".CountriesDropdown__select");
+    dom.module = $(".GrupoDropdown");
+    dom.countries_select = document.getElementById("dropdown");
   };
 
   // Initialize
   exports.init = function(file_path) {
     catchdom();
     events.createDropdown();
-    eventListeners();
+    // eventListeners();
   };
 
-  var eventListeners = function () {
-
-    // On select item
-    dom.countries_select.on("select2:select", function (event) {
-      // var selected_value = event.params.data.id;
-      // events.selectedCountry(selected_value);
-      console.log(event)
-    });
-  };
-
-  events.createNiceScroll = function() {
-
-    $(".CountriesDropdown .select2-results__options").niceScroll({
-      autohidemode: false,
-      cursorcolor:"#404040",
-      cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
-      cursoropacitymax: 0.7, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
-      cursorwidth:"9px"
-    });
-
-  };
-
+  // var eventListeners = function () {
+  //   // On select item
+  //   dom.countries_select.on("select2:select", function (event) {
+  //     console.log(event)
+  //   });
+  // };
 
   // Create custom dropdown suing select2 plugin
   events.createDropdown = function(){
+    document.getElementById("dropdown").addEventListener("change", function(){
+      var strUser = dom.countries_select.options[dom.countries_select.selectedIndex].value;
+      console.log(strUser)
 
-    var selectionFormat = function(data, container) {
-      var css_class = $(data.element).attr("data-imagecss");
-      var selection = $(
-        "<img src='img/blank.gif' class='CountriesDropdown__flag " + css_class + "'/><span class='text'>" + data.text + "</span>"
-      );
-      return selection;
-    }
+      if(strUser=="1"){
+        $(".espacios-content").removeClass("is-visible")
+        $(".magazines").addClass("is-visible")
+      }
+      if(strUser=="2"){
+        $(".espacios-content").removeClass("is-visible")
+        $(".magazines-provincia").addClass("is-visible")
+      }
+      if(strUser=="3"){
+        $(".espacios-content").removeClass("is-visible")
+        $(".magazines-estilos").addClass("is-visible")
+      }
 
-    var itemsFormat = function (state) {
-      if (!state.id) { return state.text; }
-      var css_class = $(state.element).attr("data-imagecss");
-      var data_title = $(state.element).attr("data-title");
-      var $item = $(
-        "<a href='#' class='CountriesDropdown__item' title='" + data_title + "'><img src='img/blank.gif' class='CountriesDropdown__flag " + css_class + "'/><span class='text'>" + state.text + "</span></a>"
-      );
-      return $item;
-    };
-
-    dom.countries_select.select2({
-      minimumResultsForSearch: Infinity,
-      templateResult: itemsFormat,
-      templateSelection: selectionFormat,
-      dropdownParent: $(".CountriesDropdown") // Select list wrappper
     });
+    
 
-    dom.countries_select.on('select2:open', function (e) {
-      events.createNiceScroll();
-    });
 
   };
 
   // On country selected
   events.selectedCountry = function(country_id){
-
     // Do something with this value
     console.log("Country selected: ", country_id);
   };

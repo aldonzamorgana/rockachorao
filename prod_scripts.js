@@ -20,8 +20,8 @@ var copyfile = function(){
       'fonts/**/*',
       'data/*',
       // Images
-      'img/tiendas/**/*',
-      'img/bancos/**/*',
+      'img/ciudades/*',
+      'img/generos/*',
       'img/sprite_flags.png',
       'img/sprite-icons.png',
       'img/logo-aeromexico.png',
@@ -47,22 +47,10 @@ var copyfile = function(){
       'js/vendor/jquery.incredible.srcset.js',
       'js/vendor/select2.min.js',
       'js/vendor/jquery.mask.min.js',
-
+      'js/vendor/demo.js',
       // Own javascript files
       'js/modules/*.js',
       'js/app.js',
-      // 'js/modules/main-content.js',
-      // 'js/modules/sub-tab.js',
-      // 'js/modules/one-step-ticket.js',
-      // 'js/modules/print-information.js',
-      // 'js/modules/places-of-payment--online.js',
-      // 'js/modules/places-of-payment--cash.js',
-      // 'js/modules/mybank-search-select.js',
-      // 'js/modules/send-instructions.js',
-      // 'js/modules/instructions-by.js',
-      // 'js/message-voucher-init.js',
-      // 'js/online-init.js',
-      // 'js/cash-init.js',
 
       // HTML
       'express-online-*.html',
@@ -96,8 +84,8 @@ var copyfile = function(){
     var addSourcePath = function() {
       // Edit index.html
       replace({
-        regex: 'src="img/',
-        replacement: 'src="source/img/',
+        regex: '<a href="/',
+        replacement: '<a href="source/',
         paths: ['./public/index.html'],
         recursive: true,
         silent: true

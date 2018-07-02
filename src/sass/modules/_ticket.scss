@@ -90,6 +90,7 @@ $c_fondo_tiempo   : #e1ebfc;
       display: inline-block;
       height: 28px;
       line-height: 20px;
+      white-space: nowrap;
       &:hover{
         color: white;
         -webkit-transform: scale(1.05);
