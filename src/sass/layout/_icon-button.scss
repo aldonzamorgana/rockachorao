@@ -1,0 +1,96 @@
+/*---------------------------------------------------------------------------*
+ * Start: IconButton
+----------------------------------------------------------------------------*/
+$color-blue-light-3:      #c5d2ea;
+$color-blue-safetypay:    #135699;
+$color-disabled : #dededc;
+
+.IconButton {
+  &, * { box-sizing:border-box; }
+  border: 1px solid $color-blue-light-3;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  width: 44px;
+  outline: none;
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover,
+  &:active {
+    border-color: $color-blue-safetypay;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    background-color: $color-disabled;
+  }
+
+  &:after {
+    background: transparent url(../img/sprite-icons.png) 0 0 no-repeat;
+    background-size: 190px 100px;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  // Variations
+  &--email {
+    &:after {
+      background-position: -16px 0;
+      height: 15.5px;
+      width: 20px;
+    }
+    &.is-sent {
+      background-color: $color-blue-safetypay;
+      &:after {
+        height: 20px;
+        width: 28px;
+        background-position: -26px -72.5px;
+      }
+    }
+  }
+  &--telephone {
+    &:after {
+      background-position: 0 0;
+      height: 26px;
+      width: 13px;
+    }
+    &.is-sent {
+      background-color: $color-blue-safetypay;
+      &:after {
+        height: 26px;
+        width: 23px;
+        background-position: 0 -72.5px;
+      }
+    }
+  }
+
+  &--print {
+    // margin-top: 3px;
+    &:after {
+      height: 22px;
+      width: 22px;
+      background-position: -38px 0;
+    }
+  }
+  &--location {
+    &:after {
+      height: 26px;
+      width: 24px;
+      background-position: -64px 0px;
+    }
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Endof: IconButton
+----------------------------------------------------------------------------*/

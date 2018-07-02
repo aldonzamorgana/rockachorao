@@ -1,0 +1,161 @@
+/*---------------------------------------------------------------------------*
+ * InstruccionesPago
+----------------------------------------------------------------------------*/
+// Colores
+
+// Estilos
+.InstruccionesPago, .InstruccionesPago * {
+  box-sizing: border-box;
+}
+.InstruccionesPago {
+  color: $c_texto_base;
+  display: none;
+  font-size: 13px;
+  margin-bottom: 20px;
+  // margin-top: 20px;
+
+  &.is-visible {
+    display: block;
+  }
+
+  // Estilos generales
+  .strong {
+    color: #000;
+    font-weight: $w_semibold;
+    &.blue {
+      color: $c_azul_base;
+    }
+  }
+
+  // Estilos propios del módulo
+  &-title {
+    margin: 4px 0px 14px 0px;
+    font-size: 13px;
+    color: #135699;
+  }
+  &-guia {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  &-listaPasos {
+    margin: 0;
+    &.bordes {
+      .InstruccionesPago-item {
+        padding: 18px 14px;
+        border-radius: 6px;
+        border: 1px solid #ceddf8;
+        padding: 15px 10px;
+        margin-bottom: 7px;
+        @include breakpoint(tablet) {
+          padding: 15px;
+        }
+      }
+    }
+
+    .column {
+      width: 100%;
+      @include breakpoint(phablet) {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+      }
+    }
+  }
+  &-item {
+    counter-increment: numero_item;
+    list-style: none;
+    font-size: 13.4px;
+    line-height: 17px;
+    margin: 0;
+    position: relative;
+    margin-bottom: 15px;
+    display: table;
+    width: 100%;
+    .content {
+      padding-left: 32px;
+      vertical-align: middle;
+      display: table-cell;
+      position: relative;
+      min-height: 24px;
+      .table {
+        width: 100%;
+        display: table;
+      }
+      .col {
+        padding: 5px 0;
+        @include breakpoint(tablet) {
+          padding: 0;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        &-40 {
+          width: 100%;
+          @include breakpoint(tablet) {
+            width: 40%;
+            padding-right: 20px;
+          }
+        }
+        &-60 {
+          width: 100%;
+          @include breakpoint(tablet) {
+            width: 60%;
+          }
+        }
+      }
+      .row {
+        padding: 4px 0;
+        overflow: hidden;
+        display: table;
+        width: 100%;
+      }
+      .label {
+        width: 100%;
+        font-size: 12px;
+        @include breakpoint(tablet) {
+          vertical-align: middle;
+          display: table-cell;
+          width: 50%;
+        }
+      }
+      .value {
+        width: 100%;
+        font-size: 13px;
+        font-weight: $w_semibold;
+        color: #000;
+        @include breakpoint(tablet) {
+          display: table-cell;
+
+          width: 50%;
+        }
+      }
+      .box-codigo {
+        display: inline-block;
+        padding: 10px 18px;
+        font-size: 30px;
+        font-weight: $w_semibold;
+        color: #fff;
+        background-color: #4380c6;
+      }
+      &:before {
+        content: counter(numero_item);
+        content: attr(data-num);
+        position: absolute;
+        border-radius: 12px;
+        border: 2px solid $c_azul_base;
+        left: 0;
+        color: $c_azul_base;
+        height: 20px;
+        width: 20px;
+        line-height: 21px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        margin-top: -12px;
+        top: 50%;
+      }
+    }
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Fin:InstruccionesPago
+----------------------------------------------------------------------------*/

@@ -1,0 +1,11 @@
+.SendInformationContracted.SendInformationContracted--email
+  form.SendInformationContracted__form(name="email", method="post")
+    .SendInformationContracted__content(title="Enviar las instrucciones por correo")
+      
+      //- Input config
+      - var type = 'email'
+      - var name = 'email'
+      - var placeholder = 'Correo'
+      include ./input.pug
+      
+      include ./icon-button--email.pug

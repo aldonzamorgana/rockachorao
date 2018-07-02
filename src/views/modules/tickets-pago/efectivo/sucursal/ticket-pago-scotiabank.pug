@@ -1,0 +1,35 @@
+//|MEX|Cash|Bancos|1007_"Scotiabank"|-Start-
+.Ticket.Ticket-scotiabank(data-nom-entidad="scotiabank")
+  .Ticket-title Referencia de Pago
+  .Ticket-guia 
+    .guia-content Acude a la sucursal Scotiabank y da el <b>número de convenio, número de referencia</b> y monto <b>a pagar</b>. El pago es a nombre de <b>SafetyPay</b>. Podrás pagar en <b>Efectivo o cheque de Scotiabank</b>.
+  .Ticket-content
+    .Ticket-codigo.nopadding
+      .row.row--agencia
+        p.title-value Número de Convenio
+        h2.value 3838
+      .row.row--cuentacorriente
+        p.title-value Número de referencia
+        h2.value 9038-5824-9608-122-41
+    .Ticket-total
+      .Ticket-total-detalle
+        .row
+          p.label Total:
+          h2.value $ 536.99
+    .Ticket-tiempo
+      .tiempo-mensaje
+        b Tienes:
+      .tiempo-reloj
+        i.icon-clock
+        span#timer_hor_1 183h
+        span.divisor :
+        span#timer_min_1(data-minutos='58') 58m
+        span.divisor :
+        span#timer_seg_1 24s
+      .tiempo-mensaje Paga antes del 20 Oct 2018 - 23:35 hrs.
+  .Ticket-terminos
+    span <input type="checkbox" checked="checked"> 
+    span Ver <a href="#">Términos y Condiciones</a> y <a href="#">políticas de privacidad</a>
+    span El total incluye $ 1.20 por costos operativos
+  include ../../../envio-instrucciones/envio-instrucciones-efectivo.pug
+//|MEX|Cash|Bancos|1007_"Scotiabank"|-End-

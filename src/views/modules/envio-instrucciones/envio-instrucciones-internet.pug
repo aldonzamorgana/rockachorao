@@ -1,0 +1,23 @@
+//EnvioInstrucciones
+.EnvioInstrucciones
+  .EnvioInstrucciones-content
+    .EnvioInstrucciones-row
+      button.BotonCallToAction.BotonCallToAction--bancaInternet
+        | Ir a pagar
+        i.icon
+        
+    .EnvioInstrucciones-row
+      .EnvioInstrucciones-col
+        .FormulariosInstrucciones
+          .FormulariosInstrucciones-guia Instrucciones vía
+          .FormulariosInstrucciones-content
+            include ../../layout/send-information-button--email.pug
+            include ../../layout/icon-button--print.pug
+      .EnvioInstrucciones-col
+        .Footer
+          .Footer-content
+            .Footer-ayuda
+              span <a href="mailto:soporte@safetypay.com">soporte@safetypay.com</a>
+        .Logo
+          img.Logo-img(src="img/logo-safetypay-small.png", alt="Vía SafetyPay")
+//Fin:EnvioInstrucciones

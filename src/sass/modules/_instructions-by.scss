@@ -1,0 +1,33 @@
+/*---------------------------------------------------------------------------*
+ * Start: InstructionsBy
+----------------------------------------------------------------------------*/
+.InstructionsBy {
+  &, & * {
+    box-sizing: border-box;
+  }
+  font-size: 0;
+  .IconButton {
+    margin-left: 5px;
+    &--email,
+    &--telephone {
+      margin-left: 0;
+    }
+  }
+  &__content  {
+    display: table;
+  }
+
+  &__title {
+    font-size: 13px;
+    padding-right: 5px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__buttons {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Endof: InstructionsBy
+----------------------------------------------------------------------------*/

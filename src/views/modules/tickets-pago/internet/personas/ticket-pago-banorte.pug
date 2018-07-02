@@ -1,0 +1,28 @@
+//|MEX|Online|Bancos|1026_"Banorte"|-Start-
+.Ticket.dos-columnas(data-nom-entidad="banorte")
+
+  .Ticket-content
+
+    .Ticket-total
+
+      .Ticket-total-detalle
+        .row
+          p.label Total:
+          h2.value $ 536.99
+    .Ticket-tiempo
+      .tiempo-mensaje
+        b Tienes:
+      .tiempo-reloj
+        i.icon-clock
+        span#timer_hor_1 183h
+        span.divisor :
+        span#timer_min_1(data-minutos='58') 58m
+        span.divisor :
+        span#timer_seg_1 24s
+      .tiempo-mensaje Paga antes del 20 Oct 2018 - 23:35 hrs.
+  .Ticket-terminos
+    span <input type="checkbox" checked="checked"> 
+    span Ver <a href="#">Términos y Condiciones</a> y <a href="#">políticas de privacidad</a>
+    span El total incluye $ 1.20 por costos operativos
+  include ../../../envio-instrucciones/envio-instrucciones-internet.pug
+//|MEX|Online|Bancos|1026_"Banorte"|-End-

@@ -1,0 +1,22 @@
+//MainContent - Pagar en Efectivo
+section.MainContent.is-visible(data-nom="pago-efectivo")
+  .MainContent-header
+    .GrupoSlides
+      include ../slides/slide-rock-ciudades.pug
+  .MainContent-content
+    //ProcedimientoPago
+    .ProcedimientoPago
+      //Grupo de Tickets - Sucursal
+      .GrupoTickets.GrupoTickets--sucursal(data-nom="sucursal")
+        include ../tickets-pago/efectivo/sucursal/ticket-arequipa.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-ayacucho.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-cajamarca.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-pago-santander.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-chiclayo.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-pago-scotiabank.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-pago-hsbc.pug
+        include ../tickets-pago/efectivo/sucursal/ticket-pago-inbursa.pug
+
+
+      
+      

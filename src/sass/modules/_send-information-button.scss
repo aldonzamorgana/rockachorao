@@ -1,0 +1,66 @@
+/*---------------------------------------------------------------------------*
+* Start: SendInformationButton
+----------------------------------------------------------------------------*/
+.SendInformationButton { & * { box-sizing: border-box; }
+  display: inline-block;
+  vertical-align: bottom;
+
+  &__content {
+    font-size: 0;
+    position: relative;
+
+    &.is-displayed {
+
+      &:hover {
+
+        .Input,
+        .IconButton {
+          border-color: $color-blue-safetypay;
+        }
+      }
+      .Input {
+        display: inline-block;
+        font-size: 13px;
+        &::placeholder {
+          font-size: 11px;
+        }
+      }
+      .IconButton {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+      }
+
+    }
+  }
+
+  // Email input
+  .Input {
+    vertical-align: top;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    width: 110px;
+    border-right: none;
+  }
+
+  &--telephone {
+
+    // Telephone input
+    .Input {
+      width: 95px;
+    }
+  }
+
+
+  // Error messages
+  label.error {
+    font-size: 11px;
+  }
+}
+
+/*---------------------------------------------------------------------------*
+* Endof: SendInformationButton
+----------------------------------------------------------------------------*/

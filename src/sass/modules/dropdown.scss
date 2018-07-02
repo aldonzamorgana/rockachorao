@@ -1,0 +1,25 @@
+.browser-default{
+  margin: auto;
+  max-width: 281px;
+}
+
+#dropdown{
+  color: #636363;
+  font-weight: 700;
+  border: 3px solid #FD001A;
+  background-color: #f3f3f3;
+  outline: none;
+  -webkit-appearance: menulist-button;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  &:hover{
+    background-color: #fff;
+  }
+  option{
+    &:focus{
+      border: 3px solid #FD001A;
+      background-color: #f3f3f3;
+    }
+  }
+}

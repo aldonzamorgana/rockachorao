@@ -1,0 +1,23 @@
+.SendInformationButton.SendInformationButton--telephone
+  form.SendInformationButton__form(name="telephone_instructions", method="post")
+    .SendInformationButton__content
+      
+      //- Input config
+      - var type = 'tel'
+      - var name = 'telephone'
+      - var placeholder = 'Celular (9 dígitos)'
+      include ./input.pug
+      
+      include ./icon-button--telephone.pug
+
+//- .SendInformationContracted.SendInformationContracted--telephone
+//-   form.SendInformationContracted__form(name="telephone", method="post")
+//-     .SendInformationContracted__content
+      
+//-       //- Input config
+//-       - var type = 'tel'
+//-       - var name = 'telephone'
+//-       - var placeholder = 'Celular (9 dígitos)'
+//-       include ../../atoms/input.pug
+      
+//-       include ../../atoms/icon-button--telephone.pug

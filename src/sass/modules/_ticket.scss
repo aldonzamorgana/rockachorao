@@ -1,0 +1,80 @@
+/*---------------------------------------------------------------------------*
+ * Ticket
+----------------------------------------------------------------------------*/
+// Colores
+$c_borde_punteado : #ceddf8;
+$c_fondo_barras   : #4380c6;
+$c_fondo_total    : #f6f6f6;
+$c_fondo_tiempo   : #e1ebfc;
+
+// Estilos
+.Ticket, .Ticket * {
+  box-sizing: border-box;
+}
+.Ticket {
+  // border: 2px dashed $c_borde_punteado;
+  display: none;
+  clear: both;
+  float: none;
+  margin: 0;
+  overflow: hidden;
+  // padding: 0px 10px 10px 10px;
+
+  &.is-visible {
+    display: block;
+  }
+
+  // --------------------------------------------------------------------------*
+  // Estilos para todas las entidades
+  // --------------------------------------------------------------------------*
+  .strong {
+    // font-weight: $w_semibold;
+    // color: $c_texto_base;
+    &.bold {
+      font-weight: $w_bold;
+    }
+    &.blue {
+      color: $c_texto_base_azul;
+    }
+  }
+  .blue {
+    color: $c_texto_base_azul;
+  }
+  &-title {
+    color: $c_texto_base_azul;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 3px;
+    // margin-top: 12px;
+  }
+
+  &-guia {
+    color: $c_texto_base;
+    font-size: 13.4px;
+    line-height: 1.4;
+    margin-bottom: 10px;    
+  }
+  
+  &-content {
+    display: block;
+    width: 100%;
+    a{
+      white-space: nowrap;
+    }
+    h3{
+      font-size: 18px;
+    }
+    .row{
+      width:50%;
+      float: left;
+      display: inline-block;
+    }
+    // @include breakpoint(tablet) {
+    //   display: table;
+    // }
+  }
+}
+
+/*---------------------------------------------------------------------------*
+ * Fin:Ticket
+----------------------------------------------------------------------------*/

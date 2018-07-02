@@ -1,0 +1,50 @@
+/*---------------------------------------------------------------------------*
+ * Start: Header
+----------------------------------------------------------------------------*/
+.Header {
+    &, * {box-sizing: border-box;}
+    position: relative;
+  
+    &__info {
+      position: relative;
+      &__content {
+        display: table;
+        width: 100%;
+        padding: 0 10px;
+        min-height: 30px;
+        @include breakpoint(phablet) {
+          width: 100%;
+          max-width: 370px;
+          float: right;
+        }
+        @include breakpoint(tablet) {
+          width: 370px;
+          position: absolute;
+          right: 0;
+          float: none;
+          top: 5px;
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  
+    &__reservationNumber {
+      display: table-cell;
+      vertical-align: middle;
+      width: auto;
+      @include breakpoint(mobile_small) {
+        text-align: right;
+      }
+    }
+    &__countriesDropdown {
+      text-align: right;
+      display: table-cell;
+      padding-left: 10px;
+      vertical-align: top;
+      width: 95px;
+    }
+  }
+  /*---------------------------------------------------------------------------*
+   * Endof: Header
+  ----------------------------------------------------------------------------*/
+  

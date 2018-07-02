@@ -1,0 +1,30 @@
+//EnvioInstrucciones
+.SendInstructions
+  .SendInstructions__content
+    form(action='#', method='post')
+      .row
+        .col
+          input(type='email', name='email', class="Input Input--email", placeholder='Correo', maxlength='200')
+        .col
+          .ButtonContainer
+            
+            //- Config Button
+            - var text_button = 'Enviar instrucciones vía correo'
+            include ../../layout/button.pug
+          
+.EnvioInstrucciones
+  .EnvioInstrucciones-row
+    .EnvioInstrucciones-col
+      .FormulariosInstrucciones
+        .FormulariosInstrucciones-guia Instrucciones vía
+        .FormulariosInstrucciones-content
+          include ../../layout/send-information-button--telephone.pug
+          include ../../layout/icon-button--print.pug
+    .EnvioInstrucciones-col
+      .Footer
+        .Footer-content
+          .Footer-ayuda
+            span <a href="mailto:soporte@safetypay.com">soporte@safetypay.com</a>
+      .Logo
+        img.Logo-img(src="img/logo-safetypay-small.png", alt="Vía SafetyPay")
+//Fin:EnvioInstrucciones

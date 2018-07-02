@@ -1,0 +1,54 @@
+/*---------------------------------------------------------------------------*
+ * Start: .error
+ * Form error messages
+----------------------------------------------------------------------------*/
+$color-red-error: #db5461;
+$color-red-error-dark: #C90E20;
+
+  // Error messages
+  label.error {
+    background-color: $c_blanco;
+    border-radius: 5px;
+    border: 1px solid $color-red-error;
+    color: $color-red-error;
+    font-size: 12px;
+    font-weight: 600;
+    height: 25px;
+    left: 0;
+    line-height: 23px;
+    position: absolute;
+    text-align: center;
+    top: -33px;
+    width: 100%;
+  }
+  label.error:before {
+    border-color: $c_blanco transparent transparent transparent;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    width: 0;
+    z-index: 100;
+  }
+  label.error:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: $color-red-error transparent transparent transparent;
+    margin-left: -5px;
+    left: 50%;
+    bottom: -7px;
+    position: absolute;
+  }
+
+/*---------------------------------------------------------------------------*
+ * End: .error
+----------------------------------------------------------------------------*/

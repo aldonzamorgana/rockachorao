@@ -1,0 +1,34 @@
+//SlideFinancieras: Pago por internet - Sucursal
+.SlideFinancieras.SlideFinancieras--generos.is-visible(data-nom="generos")
+  //- h1.SlideFinancieras-title Selecciona tu banco
+  .SlideFinancieras-slideWrapper
+    .SlideFinancieras-listButtons    
+    .SlideFinancieras-list
+      each val in [1]
+        .SlideFinancieras-item
+          .link-wrapper
+            a.link.seleccionado(href="#", data-nom-entidad="arequipa")
+              img(src="img/ciudades/arequipa.jpg", alt="arequipa")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="ayacucho")
+              img(src="img/ciudades/ayacucho.jpg", alt="ayacucho")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="cajamarca")
+              img(src="img/ciudades/cajamarca.jpg",  alt="cajamarca")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="chiclayo")
+              img(src="img/ciudades/chiclayo.jpg",  alt="chiclayo")
+        .SlideFinancieras-item        
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="scotiabank")
+              img(src="img/bancos/mobile/logo-scotiabank.png", data-srcset="img/bancos/logo-scotiabank.png 700w",  alt="Scotiabank")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="hsbc")
+              img(src="img/bancos/mobile/logo-hsbc.png", data-srcset="img/bancos/logo-hsbc.png 700w",  alt="HSBC")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="banco-azteca")
+              img(src="img/bancos/mobile/logo-banco-azteca.png", data-srcset="img/bancos/logo-banco-azteca.png 700w",  alt="Banco Azteca")
+          .link-wrapper
+            a.link(href="#", data-nom-entidad="inbursa")
+              img(src="img/bancos/mobile/logo-inbursa.png", data-srcset="img/bancos/logo-inbursa.png 700w",  alt="Inbursa")
+        

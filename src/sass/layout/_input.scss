@@ -1,0 +1,26 @@
+/*---------------------------------------------------------------------------*
+ * Start: Input
+----------------------------------------------------------------------------*/
+$color-blue-light-1:      #C5D5E6;
+$color-disabled : #dededc;
+
+.Input {
+  &, * { box-sizing:border-box; }
+  border: 1px solid $color-blue-light-1;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  font-size: 13px;
+  padding: 0 5px;
+  display: inline-block;
+  outline: none;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    background-color: $color-disabled;
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Endof: Input
+----------------------------------------------------------------------------*/

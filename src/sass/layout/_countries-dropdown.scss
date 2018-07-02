@@ -1,0 +1,136 @@
+/*---------------------------------------------------------------------------*
+ * Start: CountriesDropdown
+----------------------------------------------------------------------------*/
+// local configuration
+$color-charcoal-gray:#404040;
+$color-blue-safetypay: $c_azul_base;
+$color-button : $color-blue-safetypay;
+
+.CountriesDropdown {
+  &, * {
+    box-sizing:border-box;
+    outline: none;
+  }
+
+  &__select {
+    color: $color-charcoal-gray;
+    border: 1px solid $color-blue-safetypay;
+    height: 30px;
+    font-size: 11px;
+    border-radius: 5px;
+    width: 95px;
+  }
+
+  &__item {
+    text-align: left;
+    display: block;
+    width: 100%;
+    color: #0081CA;
+    text-decoration: none;
+
+    .text {
+      display: inline-block;
+      line-height: 15px;
+      vertical-align: middle;
+    }
+  }
+
+  // Banderas
+  &__flag {
+    background: transparent url(../img/sprite_flags.png) 0 0 no-repeat;
+    height: 15px;
+    width: 22px;
+    margin-top: 0;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+
+    // Countries
+    &.al { background-position: 0 0; } // Alemania
+    &.aus { background-position: 0 -25px; } // Australia
+    &.br { background-position: 0 -50px; } // Brasil
+    &.ca { background-position: 0 -75px; } // Canadá
+    &.chi { background-position: 0 -100px; } // Chile
+    &.co { background-position: 0 -125px; } // Colombia
+    &.cr { background-position: 0 -150px; } // Costa Rica
+    &.ecu { background-position: 0 -425px; } // Ecuador
+    &.esp { background-position: 0 -375px; } // España
+    &.gt { background-position: 0 -175px; } // Guatemala
+    &.hon { background-position: 0 -200px; } // Honduras
+    &.hol { background-position: 0 -400px; } // Holanda
+    &.ita { background-position: 0 -450px; } // Italia
+    &.mx { background-position: 0 -225px; } // México
+    &.ni { background-position: 0 -250px; } // Nicaragua
+    &.pa { background-position: 0 -275px; } // Panamá
+    &.pe { background-position: 0 -300px; } // Perú
+    &.por { background-position: 0 -475px; } // Portugal
+    &.sv { background-position: 0 -325px; } // Salvador
+    &.us { background-position: 0 -350px; } // Usa
+  }
+
+  // ------------------------------------------------------------------------
+  // Select2 rewrite styles
+  // ------------------------------------------------------------------------
+
+  // List resuult item
+  .select2-results__option {
+    color: #0081CA;
+    font-size: 11px;
+    height: 30px;
+    padding: 7px 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.4s ease;
+    &:hover {
+      background-color: #ececec;
+      a {
+        color: #000;
+      }
+    }
+    &:last-child { border-bottom: none; }
+  }
+
+  // Select arrow
+  .select2-container--open .select2-selection {
+    border-bottom: none !important;
+  }
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #ececec;
+    a { color: #000; }
+  }
+
+  // List item selected
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #ececec;
+    color: #000;
+    a { color: #000; }
+  }
+  .select2-selection {
+    border-color: $color-blue-safetypay;
+    height: 30px;
+  }
+  .select2-selection__rendered {
+    font-size: 11px;
+    padding-left: 10px !important;
+  }
+  .select2-selection__rendered {
+    text-align: left;
+    img {
+      vertical-align: top;
+      margin-top: 6px;
+    }
+  }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent $color-blue-safetypay transparent !important;
+  }
+  .select2-selection__arrow b {
+    border-color: $color-blue-safetypay transparent transparent transparent !important;
+  }
+  .select2-dropdown  {
+    border-color: $color-blue-safetypay;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Endof: CountriesDropdown
+----------------------------------------------------------------------------*/

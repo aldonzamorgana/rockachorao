@@ -1,0 +1,34 @@
+/*---------------------------------------------------------------------------*
+ * Footer
+----------------------------------------------------------------------------*/
+.Footer {
+  display: table-cell;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: 15%;
+  text-align: right;
+  &-content {
+    padding: 10px 0px;
+    @include breakpoint(phablet) {
+      // padding-left: 38px;
+    }
+  }
+  &-ayuda {
+    color: #7B7B7B;
+    font-size: 12px;
+    span {
+      a {
+        color: #7B7B7B;
+        text-decoration:none;
+      }
+    }
+  }
+  @include mq(tablet_mq) {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*---------------------------------------------------------------------------*
+ * Fin:Footer
+----------------------------------------------------------------------------*/

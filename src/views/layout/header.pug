@@ -1,0 +1,14 @@
+//Start: Header
+header.Header
+  .Header__content
+    .Header__info.h-clearfix
+      .Header__info__content
+        .Header__reservationNumber
+          include ./reservation-number.pug
+        .Header__countriesDropdown
+          include ./countries-dropdown.pug
+        
+    block _main_nav_
+      include ./main-nav.pug
+//End: Header
+    
