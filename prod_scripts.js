@@ -84,8 +84,8 @@ var copyfile = function(){
     var addSourcePath = function() {
       // Edit index.html
       replace({
-        regex: '<a href="/',
-        replacement: '<a href="source/',
+        regex: 'js/',
+        replacement: 'source/js/',
         paths: ['./public/index.html'],
         recursive: true,
         silent: true
