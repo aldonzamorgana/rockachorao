@@ -39,15 +39,7 @@ var copyfile = function(){
       // 'img/search-icon.png',
 
       // JS vendor files
-      'js/vendor/jquery.min.js',
-      'js/vendor/jquery.validate.min.js',
-      'js/vendor/jquery.nicescroll.min.js',
-      'js/vendor/jquery.maskedinput.min.js',
-      'js/vendor/slick.min.js',
-      'js/vendor/jquery.incredible.srcset.js',
-      'js/vendor/select2.min.js',
-      'js/vendor/jquery.mask.min.js',
-      'js/vendor/demo.js',
+      'js/vendor/*.js',
       // Own javascript files
       'js/modules/*.js',
       'js/app.js',
