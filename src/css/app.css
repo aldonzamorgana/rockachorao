@@ -1932,14 +1932,21 @@ label.error:after {
       height: 28px;
       line-height: 20px;
       white-space: nowrap;
-      display: inline-block; }
+      float: right; }
       .Ticket-content a:hover {
         color: white;
         transform: scale(1.05); }
+      .Ticket-content a:visited {
+        color: white; }
+      .Ticket-content a:focus {
+        color: white; }
     .Ticket-content h3 {
       font-size: 19px;
       font-weight: 500;
       clear: both; }
+      .Ticket-content h3 span {
+        max-width: 300px;
+        display: inline-block; }
     .Ticket-content .row {
       width: 100%;
       float: none;
@@ -1949,7 +1956,7 @@ label.error:after {
         width: 50%;
         float: left;
         display: inline-block;
-        padding: 0 0.5rem; } }
+        padding: 0 1rem; } }
 
 /*---------------------------------------------------------------------------*
  * Fin:Ticket
@@ -3001,12 +3008,12 @@ table {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOklEQVQoU43MSwoAMAgD0eT+h7ZYaOlHo7N+DNHL2HAGgBWcyGcKbqTghTL4oQiG6IUpOqFEC5bI4QD8PAoKd9j4XwAAAABJRU5ErkJggg==); }
 
 .box__deco {
-  font-size: 6rem;
+  font-size: 2.4rem;
   line-height: 1;
   font-weight: bold;
   position: absolute;
   bottom: -4rem;
-  right: -3rem;
+  right: -1rem;
   display: none; }
 
 .box__content {
@@ -3160,6 +3167,9 @@ table {
   .box__deco--left {
     right: auto;
     left: -3rem; }
+  .box__deco--bottom {
+    left: 7.2rem;
+    bottom: 0rem; }
   .box__deco--top {
     top: 0;
     bottom: auto; }
@@ -3199,25 +3209,68 @@ table {
     text-shadow: 0.3px 0.3px 0.8px #000;
     font-size: 1.2rem; } }
 
-.browser-default {
-  margin: auto;
-  max-width: 281px; }
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px; }
 
-#dropdown {
-  color: #636363;
-  font-weight: 700;
-  border: 3px solid #FD001A;
-  background-color: #f3f3f3;
-  outline: none;
-  -webkit-appearance: menulist-button;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer; }
-  #dropdown:hover {
-    background-color: #fff; }
-  #dropdown option:focus {
-    border: 3px solid #FD001A;
-    background-color: #f3f3f3; }
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  width: 220px;
+  height: 40px; }
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #c0392b;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in; }
+  .select-styled:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px; }
+  .select-styled:hover {
+    background-color: #b83729; }
+  .select-styled:active, .select-styled.active {
+    background-color: #ab3326; }
+    .select-styled:active:after, .select-styled.active:after {
+      top: 9px;
+      border-color: transparent transparent #fff transparent; }
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ab3326; }
+  .select-options li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #962d22;
+    transition: all 0.15s ease-in; }
+    .select-options li:hover {
+      color: #c0392b;
+      background: #fff; }
+    .select-options li[rel="hide"] {
+      display: none; }
 
 .GrupoTickets .espacios-content {
   display: none; }
