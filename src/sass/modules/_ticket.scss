@@ -90,7 +90,7 @@ $c_fondo_tiempo   : #e1ebfc;
       height: 28px;
       line-height: 20px;
       white-space: nowrap;
-      display:inline-block;
+      float: right;
       &:hover{
         color: white;
         -webkit-transform: scale(1.05);
@@ -98,12 +98,22 @@ $c_fondo_tiempo   : #e1ebfc;
         -o-transform: scale(1.05);
         transform: scale(1.05);
       }
+      &:visited{
+        color: white;
+      }
+      &:focus{
+        color: white;
+      }
     }
     
     h3{
       font-size: 19px;
       font-weight: 500;
       clear:both;
+      span{
+        max-width: 300px;
+        display: inline-block;
+      }
     }
     .row{
       width:100%;
@@ -115,7 +125,7 @@ $c_fondo_tiempo   : #e1ebfc;
         width:50%;
         float: left;
         display: inline-block;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
       }
     }
   }

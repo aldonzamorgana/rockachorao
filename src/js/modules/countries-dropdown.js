@@ -21,8 +21,8 @@ var CountriesDropdown = function(){
   // Initialize
   exports.init = function(file_path) {
     catchdom();
-    events.createDropdown();
-    // eventListeners();
+    events.selectedCountry();  
+    events.createDropdown();     
   };
 
   // var eventListeners = function () {
@@ -34,34 +34,69 @@ var CountriesDropdown = function(){
 
   // Create custom dropdown suing select2 plugin
   events.createDropdown = function(){
-    document.getElementById("dropdown").addEventListener("change", function(){
-      var strUser = dom.countries_select.options[dom.countries_select.selectedIndex].value;
+    $(".select-styled").bind("DOMSubtreeModified",function(){
+      var strUser = $(".select-styled").text().toUpperCase()
+      $(".espacios-content").removeClass("is-visible")
       console.log(strUser)
-
-      if(strUser=="1"){
-        $(".espacios-content").removeClass("is-visible")
+      if(strUser=="ESPACIOS"){
         $(".magazines").addClass("is-visible")
       }
-      if(strUser=="2"){
-        $(".espacios-content").removeClass("is-visible")
+      if(strUser=="ESPACIOS FUERA DE LIMA"){
         $(".magazines-provincia").addClass("is-visible")
       }
-      if(strUser=="3"){
-        $(".espacios-content").removeClass("is-visible")
+      if(strUser=="ESPACIOS POR ESTILOS"){
         $(".magazines-estilos").addClass("is-visible")
       }
-
     });
-    
-
-
   };
 
   // On country selected
   events.selectedCountry = function(country_id){
-    // Do something with this value
-    console.log("Country selected: ", country_id);
-  };
-
+    $('select').each(function(){
+      var $this = $(this), numberOfOptions = $(this).children('option').length;
+    
+      $this.addClass('select-hidden'); 
+      $this.wrap('<div class="select"></div>');
+      $this.after('<div class="select-styled"></div>');
+  
+      var $styledSelect = $this.next('div.select-styled');
+      $styledSelect.text($this.children('option').eq(0).text());
+    
+      var $list = $('<ul />', {
+          'class': 'select-options'
+      }).insertAfter($styledSelect);
+    
+      for (var i = 0; i < numberOfOptions; i++) {
+          $('<li />', {
+              text: $this.children('option').eq(i).text(),
+              rel: $this.children('option').eq(i).val()
+          }).appendTo($list);
+      }
+    
+      var $listItems = $list.children('li');
+    
+      $styledSelect.click(function(e) {
+          e.stopPropagation();
+          $('div.select-styled.active').not(this).each(function(){
+              $(this).removeClass('active').next('ul.select-options').hide();
+          });
+          $(this).toggleClass('active').next('ul.select-options').toggle();
+          
+      });
+    
+      $listItems.click(function(e) {
+          e.stopPropagation();
+          $styledSelect.text($(this).text()).removeClass('active');
+          $this.val($(this).attr('rel'));
+          $list.hide();          
+      });
+    
+      $(document).click(function() {
+          $styledSelect.removeClass('active');
+          $list.hide();
+      });
+      console.log("finished")
+    });   
+  };   
   return exports;
 };
