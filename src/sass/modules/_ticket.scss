@@ -87,10 +87,10 @@ $c_fondo_tiempo   : #e1ebfc;
       -webkit-transition: transform .3s;
       -o-transition: transform .3s;
       transition: transform .3s;
-      display: inline-block;
       height: 28px;
       line-height: 20px;
       white-space: nowrap;
+      display:inline-block;
       &:hover{
         color: white;
         -webkit-transform: scale(1.05);
@@ -103,6 +103,7 @@ $c_fondo_tiempo   : #e1ebfc;
     h3{
       font-size: 19px;
       font-weight: 500;
+      clear:both;
     }
     .row{
       width:100%;
