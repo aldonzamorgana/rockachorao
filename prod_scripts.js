@@ -36,6 +36,9 @@ var copyfile = function(){
       'img/bullet-2.png',
       'img/bullet-3.png',
       'img/bullet-4.png',
+      'img/directorio.jpg',
+      'img/logo-ra.png',
+      'img/fondo.png',
       // 'img/search-icon.png',
 
       // JS vendor files

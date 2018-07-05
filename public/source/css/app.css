@@ -769,7 +769,7 @@ a[href^="tel"] {
 ----------------------------------------------------------------------------*/
 .OuterContainer {
   background-color: #fff;
-  max-width: 835px;
+  max-width: 960px;
   margin: 0 auto; }
 
 /*---------------------------------------------------------------------------*
@@ -925,11 +925,9 @@ a[href^="tel"] {
  * MainContent
 ----------------------------------------------------------------------------*/
 .MainContent {
-  padding: 10px 15px 0 15px;
-  display: none; }
-  @media (min-width: 640px) {
-    .MainContent {
-      padding-left: 38px; } }
+  display: none;
+  max-width: 960px;
+  margin: auto; }
   .MainContent.is-visible {
     display: block; }
   .MainContent-content {
@@ -1838,12 +1836,10 @@ label.error:after {
       margin: 0 auto;
       float: none; }
   .SlideFinancieras .link {
-    border: 3px solid #fff;
     display: block;
     height: 120px;
     line-height: 47px;
     margin: 0 auto;
-    outline: 1px solid #c9e5fb;
     text-align: center;
     width: 120px;
     box-sizing: content-box;
@@ -1898,20 +1894,20 @@ label.error:after {
   .Ticket .blue {
     color: #135699; }
   .Ticket-title {
-    color: #135699;
-    font-weight: normal;
-    font-size: 21px;
+    color: #000;
+    font-weight: 600;
+    font-size: 28px;
     margin-bottom: 3px; }
   .Ticket-guia {
     color: #3D3D3D;
-    font-size: 16px;
-    line-height: 1.4;
     margin-bottom: 10px; }
     .Ticket-guia span {
       font-size: 28px;
       font-weight: 600;
-      margin: 4px; }
+      margin: 0px 4px; }
     .Ticket-guia p {
+      font-size: 18px;
+      color: #404040;
       margin: 0; }
     .Ticket-guia a:hover {
       text-decoration: underline; }
@@ -1956,7 +1952,22 @@ label.error:after {
         width: 50%;
         float: left;
         display: inline-block;
-        padding: 0 1rem; } }
+        padding: 0 1rem; }
+      .Ticket-content h3 {
+        font-size: 19px;
+        font-weight: 500;
+        clear: both; }
+        .Ticket-content h3 span {
+          max-width: 260px;
+          display: inline-block; } }
+    @media (min-width: 840px) {
+      .Ticket-content h3 {
+        font-size: 19px;
+        font-weight: 500;
+        clear: both; }
+        .Ticket-content h3 span {
+          max-width: 300px;
+          display: inline-block; } }
 
 /*---------------------------------------------------------------------------*
  * Fin:Ticket
@@ -2632,7 +2643,7 @@ html {
 body {
   margin: 0;
   --color-text: #000;
-  --color-bg: #ececec;
+  --color-bg: #CB287B;
   --color-link: #000;
   --color-link-hover: #000;
   --color-info: #000;
@@ -2640,8 +2651,7 @@ body {
   min-height: 100vh;
   color: #57585c;
   color: var(--color-text);
-  background-color: #fff;
-  background-color: var(--color-bg);
+  background: #9AD18B;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 20px; }
@@ -2656,10 +2666,6 @@ a {
     outline: none; }
   a:active {
     outline: 0; }
-  a:hover {
-    outline: 0;
-    color: var(--color-link-hover);
-    outline: none; }
 
 h1 {
   font-size: 2em;
@@ -2852,12 +2858,22 @@ table {
   fill: currentColor; }
 
 .content {
-  position: relative; }
+  position: relative;
+  background: #CCA69A; }
+
+.title-logo {
+  margin: 0; }
+  .title-logo a {
+    width: 110px;
+    margin: auto;
+    display: block; }
+    .title-logo a img {
+      width: 110px; }
 
 .sub_title {
   font-family: monospace, serif;
-  padding: 0rem 5rem;
-  margin-bottom: 3rem; }
+  padding: 1rem 3rem 2rem 3rem;
+  margin: 0; }
 
 .codrops-header {
   position: relative;
@@ -2905,7 +2921,9 @@ table {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-bottom: 10rem; }
+  padding-bottom: 10rem;
+  position: relative;
+  top: 4rem; }
 
 .grid__item {
   display: block;
@@ -2917,6 +2935,10 @@ table {
   .grid__item:hover .box__img:not(.box__img--original) {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }
+  .grid__item:hover .box__text-inner--reverse.even {
+    color: var(--color-bg); }
+  .grid__item:hover .box__text-inner--reverse.odd {
+    color: #19E218; }
 
 .box {
   position: relative;
@@ -2946,7 +2968,7 @@ table {
     height: 0;
     overflow: hidden;
     -webkit-text-stroke: 0;
-    -webkit-text-fill-color: #000000ba;
+    -webkit-text-fill-color: #000;
     color: #000000;
     transition: all 0.2s; }
 
@@ -2981,8 +3003,8 @@ table {
   padding: 0.25rem; }
 
 .box__text-inner--reverse {
-  background: var(--color-text);
-  color: var(--color-bg); }
+  color: #fff;
+  background: var(--color-text); }
 
 .box__img {
   display: block;
@@ -3051,14 +3073,14 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  background: #ececec;
+  background-image: linear-gradient(to top left, #CCA69A 70%, #9AD18B 30%);
   opacity: 0;
   display: block;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-  padding: 5rem 5vw;
+  padding: 20px 5vw;
   -ms-flex-pack: center;
       justify-content: center;
   overflow-y: auto; }
@@ -3107,13 +3129,18 @@ table {
   max-width: 25rem;
   margin: 1rem 0 0 10vw; }
 
+@media (min-width: 840px) {
+  .grid {
+    position: relative;
+    top: 0rem; } }
+
 @media screen and (min-width: 55em) {
   .grid {
     display: -ms-grid;
     display: grid;
     -ms-flex-align: center;
         align-items: center;
-    padding: 3rem 3rem 15rem 3rem;
+    padding: 1rem 3rem 15rem 3rem;
     grid-row-gap: 2rem;
     -ms-grid-columns: (calc(100% / 3))[3];
         grid-template-columns: repeat(3, calc(100% / 3)); }

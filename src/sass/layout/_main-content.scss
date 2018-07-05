@@ -2,12 +2,13 @@
  * MainContent
 ----------------------------------------------------------------------------*/
 .MainContent {
-  padding: 10px 15px 0 15px;  
+  // padding: 10px 15px 0 15px;  
   display: none;
   max-width: 960px;
   margin: auto;
+  // background: #fff;
   @include breakpoint(phablet) {
-    padding-left: 38px;    
+    // padding-left: 38px;    
   }
   &.is-visible {
     display: block;
