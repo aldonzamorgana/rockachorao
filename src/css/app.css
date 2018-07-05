@@ -926,7 +926,9 @@ a[href^="tel"] {
 ----------------------------------------------------------------------------*/
 .MainContent {
   padding: 10px 15px 0 15px;
-  display: none; }
+  display: none;
+  max-width: 960px;
+  margin: auto; }
   @media (min-width: 640px) {
     .MainContent {
       padding-left: 38px; } }
