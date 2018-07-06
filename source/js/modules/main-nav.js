@@ -1,7 +1,7 @@
 var MainNav = (function(){
   // Variables que se reutilizarán: referencias al DOM, variables estáticas, etc.
   var set = {
-    nav_button: $('.MainNav-item')
+    nav_button: $('.grid__item')
   };
 
   // Método de inicialización del módulo

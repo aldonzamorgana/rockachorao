@@ -587,19 +587,7 @@ table {
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 0;
-    background-image: -webkit-gradient(
-	linear,
-	top left,
-	top left,
-	color-stop(0.7, #CCA69A),
-	color-stop(0.3, #9AD18B)
-	);
-	background-image: -o-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
-	background-image: -moz-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
-	background-image: -webkit-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
-	background-image: -ms-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
-	background-image: linear-gradient(to top left, #CCA69A 70%, #9AD18B 30%);
+    left: 0;    
     opacity: 0;
     display: block;
     flex-direction: column;
@@ -614,6 +602,37 @@ table {
 		bottom: 0;
 	}
 }
+
+#preview-1{
+	background-image: -webkit-gradient(
+	linear,
+	top left,
+	top left,
+	color-stop(0.7, #CCA69A),
+	color-stop(0.3, #9AD18B)
+	);
+	background-image: -o-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
+	background-image: -moz-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
+	background-image: -webkit-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
+	background-image: -ms-linear-gradient(top left, #CCA69A 70%, #9AD18B 30%);
+	background-image: linear-gradient(to top left, #CCA69A 70%, #9AD18B 30%);
+}
+
+#preview-2{
+	background-image: -webkit-gradient(
+	linear,
+	right top,
+	right top,
+	color-stop(0.7, #9AD18B),
+	color-stop(0.3, #CCA69A)
+	);
+	background-image: -o-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -moz-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -webkit-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -ms-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: linear-gradient(to right top, #9AD18B 70%, #CCA69A 30%);
+}
+
 .box_index {
 	pointer-events: auto;
 	z-index: 999999;

@@ -234,19 +234,20 @@
   .link {
     // border: 3px solid $c_blanco;
     display: block;
-    height: 120px;
+    height: 100px;
     line-height: 47px;
     margin: 0 auto;
-    // outline: 1px solid $c_azul_claro_2;
+    outline: 1px solid #fff;
     text-align: center;
-    width: 120px;
+    width: 100px;
     box-sizing: content-box;
     -moz-box-sizing: border-box;
+    border: 2px solid #ffffff;
     overflow: hidden;
     &.is-selected,
     &.seleccionado {
-      outline: 1px solid $c_blanco;
-      border: 3px solid #000000;
+      outline: 1px solid #000;
+      border: 2px solid #000000;
     }
     &.is-disabled {
       outline-color: #D2D2D2;
@@ -263,7 +264,7 @@
     img {
       display: block;
       margin: 0 auto;
-      max-width: 120px;
+      max-width: 100px;
       width: 100%;
       @include breakpoint(phablet_large) {
         max-width: 120px;

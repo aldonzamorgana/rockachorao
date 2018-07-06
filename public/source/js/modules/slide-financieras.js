@@ -48,32 +48,10 @@ var SlideFinancieras = (function(){
       reponsive: false,
       adaptiveHeight: true
     });
-
-    var nom_boton_principal_activo = $('.MainNav-item.is-active').attr('data-nom');   
-    var seccion_principal_activa = $('.MainContent[data-nom="'+nom_boton_principal_activo+'"]');
     
     $(".slideButton").on("click", function(){
-      seccion_principal_activa.find('.SlideFinancieras--pagoEfectivoTiendas').removeClass('is-visible');
-
-      if ($(".SlideFinancieras").hasClass("SlideFinancieras--pagoEfectivoTiendas is-visible")) {
-        var self = $(".SlideFinancieras--pagoEfectivoTiendas.is-visible");
-        var first_item = self.find(".SlideFinancieras-item.slick-active").find(".link-wrapper").first();
-        first_item.children("a").click();
-      }
-
-      else{
-
         var first_item = $('.MainContent.is-visible').find(".SlideFinancieras-item.slick-active").find(".link-wrapper").first();
         first_item.children("a").click();
-      }
-      
-      // else if (seccion_principal_activa === "banca-internet"){
-      //   console.log("entra a internet")
-        
-      //   var first_item = $('.MainContent.is-visible').find(".SlideFinancieras-item.slick-active").find(".link-wrapper").first();
-      //   first_item.children("a").click();
-      // }
-
     })
 
     // Eventos después se pase deun elemento a otro
@@ -102,7 +80,7 @@ var SlideFinancieras = (function(){
   events.navigateSlideTo = function(nombre_entidad, nombre_slide) {
 
     // Reconocemos el slide al que debemos mover
-    var target_slide = $('.MainContent.is-visible').find('.SlideFinancieras[data-nom="'+nombre_slide+'"] .SlideFinancieras-list');
+    var target_slide = $('.MainContent.is-visible').find('.SlideFinancieras[data-nom="'+nombre_slide+'"].SlideFinancieras-list');
 
     // Buscamos la posición del resultado seleccionado
     var item_slide_seleccionado = target_slide.find('.link-wrapper .link[data-nom-entidad="'+nombre_entidad+'"]');

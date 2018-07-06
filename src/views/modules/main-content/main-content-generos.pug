@@ -1,13 +1,15 @@
 
-section.MainContent.is-visible(data-nom="banca-internet")
+section.MainContent.is-visible(data-nom="generos")
+  h1.title-logo
+      a(href="#")
+        img(src="img/logo-ra.png", target="_blank")
   .MainContent-header
     .GrupoSlides
       include ../slides/slide-rock-generos.pug
   .MainContent-content
     //ProcedimientoPago
     .ProcedimientoPago
-      //Grupo Tickets - Personas
-      .GrupoTickets(data-nom="personas")
+
         include ../tickets-pago/bandas/generos/ticket-grunge.pug
         include ../tickets-pago/bandas/generos/ticket-funk.pug
         include ../tickets-pago/bandas/generos/ticket-ska.pug

@@ -1,5 +1,5 @@
 //MainContent - Pagar en Efectivo
-section.MainContent.is-visible(data-nom="pago-efectivo")
+section.MainContent.is-visible(data-nom="ciudades")
   h1.title-logo
       a(href="#")
         img(src="img/logo-ra.png", target="_blank")
@@ -9,8 +9,7 @@ section.MainContent.is-visible(data-nom="pago-efectivo")
   .MainContent-content
     //ProcedimientoPago
     .ProcedimientoPago
-      //Grupo de Tickets - Sucursal
-      .GrupoTickets.GrupoTickets--sucursal(data-nom="sucursal")
+
         include ../tickets-pago/bandas/ciudades/ticket-arequipa.pug
         include ../tickets-pago/bandas/ciudades/ticket-ayacucho.pug
         include ../tickets-pago/bandas/ciudades/ticket-cajamarca.pug

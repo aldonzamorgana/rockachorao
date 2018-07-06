@@ -1837,17 +1837,19 @@ label.error:after {
       float: none; }
   .SlideFinancieras .link {
     display: block;
-    height: 120px;
+    height: 100px;
     line-height: 47px;
     margin: 0 auto;
+    outline: 1px solid #fff;
     text-align: center;
-    width: 120px;
+    width: 100px;
     box-sizing: content-box;
     -moz-box-sizing: border-box;
+    border: 2px solid #ffffff;
     overflow: hidden; }
     .SlideFinancieras .link.is-selected, .SlideFinancieras .link.seleccionado {
-      outline: 1px solid #fff;
-      border: 3px solid #000000; }
+      outline: 1px solid #000;
+      border: 2px solid #000000; }
     .SlideFinancieras .link.is-disabled {
       outline-color: #D2D2D2;
       -webkit-filter: grayscale(100%);
@@ -1862,7 +1864,7 @@ label.error:after {
     .SlideFinancieras .link img {
       display: block;
       margin: 0 auto;
-      max-width: 120px;
+      max-width: 100px;
       width: 100%; }
       @media (min-width: 700px) {
         .SlideFinancieras .link img {
@@ -3073,7 +3075,6 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to top left, #CCA69A 70%, #9AD18B 30%);
   opacity: 0;
   display: block;
   -ms-flex-direction: column;
@@ -3088,6 +3089,12 @@ table {
     margin: 0; }
   .overlay__item .box__title {
     bottom: 0; }
+
+#preview-1 {
+  background-image: linear-gradient(to top left, #CCA69A 70%, #9AD18B 30%); }
+
+#preview-2 {
+  background-image: linear-gradient(to right top, #9AD18B 70%, #CCA69A 30%); }
 
 .box_index {
   pointer-events: auto;
