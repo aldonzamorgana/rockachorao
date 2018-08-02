@@ -47,9 +47,10 @@ $select-height: 40px;
 }
 .select {
   cursor: pointer;
-  display: inline-block;
+  display: block;
   position: relative;
   font-size: 16px;
+  margin:auto;
   color: $select-color;
   width: $select-width;
   height: $select-height;

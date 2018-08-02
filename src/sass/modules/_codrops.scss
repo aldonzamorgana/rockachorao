@@ -633,6 +633,21 @@ table {
 	background-image: linear-gradient(to right top, #9AD18B 70%, #CCA69A 30%);
 }
 
+#preview-3{
+	background-image: -webkit-gradient(
+	linear,
+	right top,
+	right top,
+	color-stop(0.7, #9AD18B),
+	color-stop(0.3, #CCA69A)
+	);
+	background-image: -o-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -moz-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -webkit-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: -ms-linear-gradient(right top, #9AD18B 70%, #CCA69A 30%);
+	background-image: linear-gradient(to right top, #9AD18B 70%, #CCA69A 30%);
+}
+
 .box_index {
 	pointer-events: auto;
 	z-index: 999999;
@@ -644,7 +659,7 @@ table {
 .overlay__close {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	background: none;
 	border: 0;
 	margin: 1rem;
